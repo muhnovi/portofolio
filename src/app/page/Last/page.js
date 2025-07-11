@@ -1,7 +1,7 @@
-import Link from "next/link"
-import { CiFacebook, CiTwitter } from "react-icons/ci"
-import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io"
-import { SiGmail } from "react-icons/si"
+import Link from "next/link";
+import { CiFacebook, CiTwitter } from "react-icons/ci";
+import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
+import { SiGmail } from "react-icons/si";
 
 export default function Contact() {
   const socialLinks = [
@@ -33,7 +33,7 @@ export default function Contact() {
     //   color: "hover:text-blue-700",
     //   bgColor: "hover:bg-blue-50 dark:hover:bg-blue-900/20",
     // },
-  ]
+  ];
 
   return (
     <div className="wrapper">
@@ -42,7 +42,9 @@ export default function Contact() {
           <h1 className="text-4xl md:text-5xl font-bold gradient-text leading-tight font-display mb-4">
             Let's Connect
           </h1>
-          <p className="text-gray-600 dark:text-gray-300 text-lg">Terhubunglah denganku melalui platform berikut</p>
+          <p className="text-gray-600 dark:text-gray-300 text-lg">
+            Terhubunglah denganku melalui platform berikut
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -50,7 +52,12 @@ export default function Contact() {
           <div className="bg-white/10 dark:bg-gray-900/20 backdrop-blur-lg rounded-3xl p-8 shadow-2xl border border-white/20 dark:border-gray-700/20">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full flex items-center justify-center">
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg
+                  className="w-5 h-5 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -59,7 +66,9 @@ export default function Contact() {
                   />
                 </svg>
               </div>
-              <h2 className="text-2xl font-bold text-gray-800 dark:text-white">Social Media</h2>
+              <h2 className="text-2xl font-bold text-gray-800 dark:text-white">
+                Social Media
+              </h2>
             </div>
 
             <div className="space-y-4">
@@ -97,21 +106,30 @@ export default function Contact() {
               <div className="w-10 h-10 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center">
                 <SiGmail className="w-5 h-5 text-white" />
               </div>
-              <h2 className="text-2xl font-bold text-gray-800 dark:text-white">Email</h2>
+              <h2 className="text-2xl font-bold text-gray-800 dark:text-white">
+                Email
+              </h2>
             </div>
 
             <div className="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 rounded-xl p-6 border border-red-200 dark:border-red-800/30">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+              <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <SiGmail className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-1">Email Address</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-1">
+                    Email Address
+                  </p>
                   <a
                     href="mailto:muhnoviyanto815@gmail.com"
                     className="text-sm font-semibold text-gray-800 dark:text-white hover:text-red-600 dark:hover:text-red-400 transition-colors"
                   >
-                    muhnoviyanto815@gmail.com
+                    {/* Tampilkan email lengkap di layar sm ke atas */}
+                    <span className="hidden sm:inline">
+                      muhnoviyanto815@gmail.com
+                    </span>
+                    {/* Tampilkan singkatan di mobile */}
+                    <span className="inline sm:hidden">Mail Saya</span>
                   </a>
                 </div>
               </div>
@@ -119,12 +137,13 @@ export default function Contact() {
 
             <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-800/30">
               <p className="text-sm text-blue-800 dark:text-blue-300 text-center">
-                💡 Jangan ragu untuk menghubungi saya untuk diskusi project atau kolaborasi!
+                💡 Jangan ragu untuk menghubungi saya untuk diskusi project atau
+                kolaborasi!
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
