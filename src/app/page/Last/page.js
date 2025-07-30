@@ -15,7 +15,7 @@ export default function Contact() {
     {
       icon: CiTwitter,
       name: "MuhFi",
-      url: "https://x.com/giri_diwa",
+      url: "https://x.com/MuhammadNoviya6",
       color: "hover:text-cyan-500",
       bgColor: "hover:bg-cyan-50 dark:hover:bg-cyan-900/20",
     },
