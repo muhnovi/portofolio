@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Tooltip from "../components/ToolTip";
 import { CiFacebook, CiTwitter } from "react-icons/ci";
 import { IoLogoGithub,IoLogoLinkedin  } from "react-icons/io";
 import { SiGmail } from "react-icons/si";
@@ -46,7 +45,6 @@ export default function Contact(){
                     <div className="rounded border border-border py-3 px-3 flex items-center gap-3">
                         <SiGmail /> muhnoviyanto815@gmail.com
                     </div>
-                   
                 </div>
             </div>
         </div>
