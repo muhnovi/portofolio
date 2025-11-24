@@ -126,7 +126,7 @@ export default function Contact() {
                   >
                     {/* Tampilkan email lengkap di layar sm ke atas */}
                     <span className="hidden sm:inline">
-                      muhnoviyanto815@gmail.com
+                      muh.nov004@gmail.com
                     </span>
                     {/* Tampilkan singkatan di mobile */}
                     <span className="inline sm:hidden">Mail Saya</span>
