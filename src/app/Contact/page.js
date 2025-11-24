@@ -43,7 +43,7 @@ export default function Contact(){
                 <p className="font-semibold text-[18px] font-body mb-[20px]">Atau Bisa Lewat :</p>
                 <div className="flex flex-wrap items-center mt-[8px] mb-[10px] gap-3">
                     <div className="rounded border border-border py-3 px-3 flex items-center gap-3">
-                        <SiGmail /> muhnoviyanto815@gmail.com
+                        <SiGmail /> muh.nov004@gmail.com
                     </div>
                 </div>
             </div>
