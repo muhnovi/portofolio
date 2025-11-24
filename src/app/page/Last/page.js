@@ -121,7 +121,7 @@ export default function Contact() {
                     Email Address
                   </p>
                   <a
-                    href="mailto:muhnoviyanto815@gmail.com"
+                    href="mailto:muh.nov004@gmail.com"
                     className="text-sm font-semibold text-gray-800 dark:text-white hover:text-red-600 dark:hover:text-red-400 transition-colors"
                   >
                     {/* Tampilkan email lengkap di layar sm ke atas */}
