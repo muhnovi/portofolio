@@ -23,6 +23,7 @@ const interRegular = localFont({
 export const metadata = {
   title: "Muhammad Noviyanto",
   description: "Personal Portofolio",
+  keywords: "Muhammad Noviyanto, Noviyanto, Muhnov, MuhFi, Portofolio, Developer, Programmer, Web Developer, Frontend Developer, Backend Developer, Fullstack Developer",
 };
 
 export default function RootLayout({ children }) {
