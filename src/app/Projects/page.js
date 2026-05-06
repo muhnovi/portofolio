@@ -1,50 +1,67 @@
+"use client"
+
+import { useState } from "react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+
 export default function Projects() {
+  const [teamSlide, setTeamSlide] = useState(0)
+  const [selfSlide, setSelfSlide] = useState(0)
+
   const teamProjects = [
     {
       title: "Jejak Rasa",
-      description: "Aplikasi mobile",
+      description: "Aplikasi mobile untuk tracking kuliner dan rekomendasi restoran",
       image: "/images/jejakrasa.png",
-      url: "https://kkp.adhyamitra.com",
-      tech: ["Flutter", "Dart", "Subabase"],
+      url: "#",
+      tech: ["Flutter", "Dart", "Supabase"],
     },
   ]
 
   const selfProjects = [
     {
-      title: "Unknow",
-      description: "unknow",
-      image: "",
-      url: "unknow",
-      tech: ["unknow"],
+      title: "Nero Chain Profile",
+      description: "Profile berbasis blockchain untuk menampilkan portofolio dan pencapaian secara transparan dan terdesentralisasi",
+      image: "/images/nerochain.png",
+      url: "https://nero-profile.vercel.app",
+      tech: ["Next.js"],
+    },
+    {
+      title: "Penduduk Garotan",
+      description: "Aplikasi web untuk mengelola data penduduk di desa Garotan, Semin, Gunungkidul. Dengan fitur login admin untuk mempermudah mengelola data penduduk, termasuk menambahkan, mengedit, dan menghapus informasi penduduk secara efisien.",
+      image: "/images/pendudukgarotan.png",
+      url: "https://penduduk.garotanmanunggal.web.id/",
+      tech: ["Next.js"],
     },
   ]
 
-  const ProjectCard = ({ project, index }) => (
-    <div
-      className={`group bg-white/10 dark:bg-gray-900/20 backdrop-blur-lg rounded-2xl overflow-hidden shadow-xl border border-white/20 dark:border-gray-700/20 hover:shadow-2xl transition-all duration-500 hover:scale-105 fade-in`}
-      style={{ animationDelay: `${index * 0.1}s` }}
-    >
-      <div className="relative overflow-hidden">
+  const ProjectCard = ({ project }) => (
+    <div className="group bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden shadow-sm border border-zinc-200 dark:border-zinc-800 hover:shadow-md transition-all duration-300 hover:scale-[1.02] h-full flex flex-col">
+      <div className="relative overflow-hidden bg-zinc-100 dark:bg-zinc-800">
         <img
           src={project.image || "/placeholder.svg"}
           alt={project.title}
-          className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+          className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+          onError={(e) => {
+            e.target.onerror = null
+            e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect fill='%23ddd' width='100' height='100'/%3E%3Ctext fill='%23999' font-family='sans-serif' font-size='12' dy='10.5' font-weight='bold' x='50%25' y='50%25' text-anchor='middle'%3ENo Image%3C/text%3E%3C/svg%3E"
+          }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
 
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2 group-hover:text-blue-600 transition-colors">
+      <div className="p-6 flex flex-col flex-1">
+        <h3 className="text-lg font-bold text-zinc-900 dark:text-white mb-2 tracking-tight">
           {project.title}
         </h3>
 
-        <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 leading-relaxed">{project.description}</p>
+        <p className="text-zinc-500 dark:text-zinc-400 text-sm mb-4 leading-relaxed flex-1">
+          {project.description}
+        </p>
 
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tech.map((tech, techIndex) => (
             <span
               key={techIndex}
-              className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-xs rounded-full font-medium"
+              className="px-3 py-1 bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs rounded-full font-mono border border-zinc-200 dark:border-zinc-700"
             >
               {tech}
             </span>
@@ -53,84 +70,155 @@ export default function Projects() {
 
         <a
           href={project.url}
-          target="_blank"
+          target={project.url !== "#" ? "_blank" : "_self"}
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 hover:shadow-lg transform hover:scale-105"
+          className={`inline-flex items-center gap-2 bg-zinc-900 dark:bg-white hover:bg-zinc-700 dark:hover:bg-zinc-200 text-white dark:text-zinc-900 font-medium py-2 px-4 rounded-lg transition-all duration-300 text-sm mt-auto ${
+            project.url === "#" ? "opacity-50 cursor-not-allowed pointer-events-none" : ""
+          }`}
         >
-          <span>Visit Website</span>
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-            />
-          </svg>
+          <span>{project.url === "#" ? "Coming Soon" : "Visit Website"}</span>
+          {project.url !== "#" && (
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          )}
         </a>
       </div>
     </div>
   )
 
+  const SliderSection = ({ title, subtitle, projects, currentSlide, setSlide }) => {
+    const itemsPerSlide = 3
+    const totalSlides = Math.ceil(projects.length / itemsPerSlide)
+    
+    const nextSlide = () => {
+      setSlide((prev) => (prev + 1) % totalSlides)
+    }
+
+    const prevSlide = () => {
+      setSlide((prev) => (prev - 1 + totalSlides) % totalSlides)
+    }
+
+    const SectionHeader = () => (
+      <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center gap-4">
+          <div className="w-1 h-10 bg-zinc-900 dark:bg-white rounded-full"></div>
+          <div>
+            <h2 className="text-2xl font-bold text-zinc-900 dark:text-white tracking-tight">{title}</h2>
+            <p className="text-zinc-500 dark:text-zinc-400 text-sm">{subtitle}</p>
+          </div>
+        </div>
+        
+        {projects.length > itemsPerSlide && (
+          <div className="flex items-center gap-2">
+            <button
+              onClick={prevSlide}
+              className="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 border border-zinc-200 dark:border-zinc-700 transition-all duration-300 group"
+            >
+              <ChevronLeft className="w-5 h-5 text-zinc-600 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors" />
+            </button>
+            <div className="text-sm font-mono text-zinc-500 dark:text-zinc-400 px-2">
+              {currentSlide + 1} / {totalSlides}
+            </div>
+            <button
+              onClick={nextSlide}
+              className="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 border border-zinc-200 dark:border-zinc-700 transition-all duration-300 group"
+            >
+              <ChevronRight className="w-5 h-5 text-zinc-600 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors" />
+            </button>
+          </div>
+        )}
+      </div>
+    )
+
+    // If projects are 3 or less, show grid without slider
+    if (projects.length <= itemsPerSlide) {
+      return (
+        <div>
+          <SectionHeader />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((project, index) => (
+              <ProjectCard key={index} project={project} />
+            ))}
+          </div>
+        </div>
+      )
+    }
+
+    // Show slider for more than 3 projects
+    return (
+      <div>
+        <SectionHeader />
+        
+        <div className="relative overflow-hidden">
+          <div 
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+          >
+            {Array.from({ length: totalSlides }).map((_, slideIndex) => (
+              <div key={slideIndex} className="w-full flex-shrink-0">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {projects.slice(slideIndex * itemsPerSlide, (slideIndex + 1) * itemsPerSlide).map((project, index) => (
+                    <ProjectCard key={index} project={project} />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Slide Counter and Dots */}
+        <div className="flex items-center justify-center gap-4 mt-6">
+          {totalSlides > 1 && (
+            <div className="flex items-center justify-center gap-2">
+              {Array.from({ length: totalSlides }).map((_, dotIndex) => (
+                <button
+                  key={dotIndex}
+                  onClick={() => setSlide(dotIndex)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    dotIndex === currentSlide
+                      ? "bg-zinc-900 dark:bg-white w-6"
+                      : "bg-zinc-300 dark:bg-zinc-600 hover:bg-zinc-400 dark:hover:bg-zinc-500"
+                  }`}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="wrapper">
-      <div className="md:pt-[50px] pt-[50px] fade-in">
+      <div className="md:pt-[50px] pt-[50px]">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold gradient-text leading-tight font-display mb-4">My Projects</h1>
-          <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold text-zinc-900 dark:text-white leading-tight mb-4 tracking-tight">
+            My Projects
+          </h1>
+          <p className="text-zinc-500 dark:text-zinc-400 text-sm max-w-2xl mx-auto">
             Koleksi project yang telah saya kerjakan baik secara tim maupun individual
           </p>
         </div>
 
-        {/* Team Projects */}
         <div className="mb-16">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                />
-              </svg>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold text-gray-800 dark:text-white">Team Projects</h2>
-              <p className="text-gray-600 dark:text-gray-300">Proyek yang dikerjakan bersama tim di kantor</p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamProjects.map((project, index) => (
-              <ProjectCard key={index} project={project} index={index} />
-            ))}
-          </div>
+          <SliderSection 
+            title="Team Projects" 
+            subtitle="Proyek yang dikerjakan bersama tim di kantor"
+            projects={teamProjects}
+            currentSlide={teamSlide}
+            setSlide={setTeamSlide}
+          />
         </div>
 
-        {/* Self Projects */}
         <div className="mb-16">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-teal-600 rounded-full flex items-center justify-center">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                />
-              </svg>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold text-gray-800 dark:text-white">Personal Projects</h2>
-              <p className="text-gray-600 dark:text-gray-300">Proyek yang dikerjakan secara mandiri</p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {selfProjects.map((project, index) => (
-              <ProjectCard key={index} project={project} index={index} />
-            ))}
-          </div>
+          <SliderSection 
+            title="Personal Projects" 
+            subtitle="Proyek yang dikerjakan secara mandiri"
+            projects={selfProjects}
+            currentSlide={selfSlide}
+            setSlide={setSelfSlide}
+          />
         </div>
       </div>
     </div>

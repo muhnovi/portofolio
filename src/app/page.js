@@ -6,45 +6,37 @@ export default function Home() {
 
   return (
     <div className="wrapper">
-      <div className="py-8 my-8 md:pt-[50px] pt-[50px] fade-in">
-        <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-lg rounded-3xl p-8 shadow-2xl border border-gray-200/50 dark:border-gray-700/50">
-          <p className="text-lg font-medium text-gray-600 dark:text-gray-300 pb-6 slide-in">Hallo Dunia, Saya 👋</p>
+      <div className="py-8 my-8 md:pt-[50px] pt-[50px]">
+        <div className="bg-white dark:bg-zinc-900 rounded-2xl p-8 shadow-sm border border-zinc-200 dark:border-zinc-800">
+          <p className="text-sm font-mono text-zinc-500 dark:text-zinc-400 pb-6 tracking-widest uppercase">
+            Hallo Dunia, Saya 👋
+          </p>
 
-          <h1 className="text-4xl md:text-6xl font-bold gradient-text leading-tight font-display mb-6 floating">
+          <h1 className="text-4xl md:text-6xl font-bold text-zinc-900 dark:text-white leading-tight mb-6 floating tracking-tight">
             {fullname}
           </h1>
 
-          <div className="space-y-4 mb-8">
-            <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
+          <div className="space-y-3 mb-8">
+            <h2 className="text-lg font-semibold text-zinc-700 dark:text-zinc-300">
               Saya Pemula
             </h2>
-
-            <p className="text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl">
+            <p className="text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-2xl text-sm">
               Suka Tantangan dan Membantu sesama.
             </p>
           </div>
 
-          <div className="flex items-center gap-3 mb-8 p-4 bg-red-50 dark:bg-red-900/30 rounded-xl border border-red-200 dark:border-red-800/50">
-            <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-            <span className="text-red-700 dark:text-red-300 font-medium">Belum Bersedia Untuk Di Rekrut</span>
+          <div className="flex items-center gap-3 mb-8 p-4 bg-zinc-50 dark:bg-zinc-800 rounded-xl border border-zinc-200 dark:border-zinc-700">
+            <div className="w-2.5 h-2.5 bg-zinc-400 dark:bg-zinc-500 rounded-full animate-pulse"></div>
+            <span className="text-zinc-600 dark:text-zinc-400 font-medium text-sm font-mono">
+              Belum Bersedia Untuk Di Rekrut
+            </span>
           </div>
 
           <Link
             href="/"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center gap-3 bg-zinc-900 dark:bg-white hover:bg-zinc-700 dark:hover:bg-zinc-200 text-white dark:text-zinc-900 font-semibold py-3 px-6 rounded-full shadow-sm hover:shadow-md transition-all duration-300"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-arrow-down-to-line w-5 h-5"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
               <path d="M12 17V3" />
               <path d="m6 11 6 6 6-6" />
               <path d="M19 21H5" />
@@ -54,7 +46,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="fade-in">
+      <div>
         <Last />
       </div>
     </div>
