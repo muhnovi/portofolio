@@ -1,12 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
+  },
   eslint: {
-    // Ini akan skip ESLint saat build
+    // Nonaktifkan ESLint saat build untuk menghindari error
     ignoreDuringBuilds: true,
   },
   typescript: {
-    // Optional: Skip TypeScript checking jika ada error
-    ignoreBuildErrors: true,
+    // Optional: hanya jika ada type errors
+    ignoreBuildErrors: false,
   },
 };
 
