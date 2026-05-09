@@ -64,7 +64,7 @@ export const metadata = {
       "Portfolio resmi Muhammad Noviyanto (Muhnov / MuhFi), Frontend Developer spesialis Next.js, Tailwind CSS, dan React.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/images/img.jpg",
         width: 1200,
         height: 630,
         alt: "Muhammad Noviyanto - Frontend Developer",
@@ -77,7 +77,7 @@ export const metadata = {
     description:
       "Portfolio resmi Muhammad Noviyanto (Muhnov / MuhFi), Frontend Developer spesialis Next.js, Tailwind CSS, dan React.",
     creator: "@MuhammadNoviya6",
-    images: ["/og-image.jpg"],
+    images: ["/images/img.jpg"],
   },
   robots: {
     index: true,
