@@ -34,7 +34,7 @@ export default function Contact() {
               <div className="p-4 bg-zinc-50 dark:bg-zinc-800 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors">
                 <div className="flex items-center gap-3">
                   <CiTwitter className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
-                  <Link href="https://x.com/MuhammadNoviya6" className="text-zinc-600 dark:text-zinc-400 font-medium text-sm hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
+                  <Link href="https://x.com/0x9MuhFi" className="text-zinc-600 dark:text-zinc-400 font-medium text-sm hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
                     MuhFi
                   </Link>
                 </div>

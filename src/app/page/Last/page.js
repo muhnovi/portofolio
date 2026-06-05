@@ -73,7 +73,7 @@ export default function Last() {
                   Email
                 </p>
                 <a
-                  href="mailto:muhnoviyanto815@gmail.com"
+                  href="mailto:muhfibusiness@gmail.com"
                   className="text-sm font-semibold text-zinc-900 dark:text-white hover:text-zinc-500 transition-colors"
                 >
                   <span className="hidden sm:inline">muhfibusiness@gmail.com</span>
