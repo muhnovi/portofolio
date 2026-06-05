@@ -1,15 +1,12 @@
 import Image from "next/image";
-import {
-  SiNextdotjs,
-  SiTailwindcss,
-  SiShadcnui,
-} from "react-icons/si";
+import { SiNextdotjs, SiTailwindcss, SiShadcnui, SiExpo } from "react-icons/si";
 
 export default function About() {
   const techStack = [
     { icon: SiNextdotjs, name: "Next.js" },
     { icon: SiTailwindcss, name: "Tailwind CSS" },
     { icon: SiShadcnui, name: "Shadcn UI" },
+    { icon: SiExpo, name: "Expo" },
   ];
 
   return (
@@ -20,17 +17,17 @@ export default function About() {
             {/* Profile Image Section */}
             <div className="relative group flex-shrink-0">
               <div className="w-28 h-28 md:w-36 md:h-36 rounded-2xl overflow-hidden border-2 border-zinc-200 dark:border-zinc-700 shadow-lg relative z-10">
-                    <Image
-                    src="/images/img.jpg"
-                    alt="Muhammad Noviyanto"
-                    fill
-                    className="object-cover"
-                  />
+                <Image
+                  src="/images/img.jpg"
+                  alt="Muhammad Noviyanto"
+                  fill
+                  className="object-cover"
+                />
               </div>
-              
+
               {/* Glow Effect */}
               <div className="absolute -inset-1 bg-gradient-to-r from-zinc-400 via-zinc-600 to-zinc-400 dark:from-zinc-500 dark:via-zinc-300 dark:to-zinc-500 rounded-2xl blur-lg opacity-0 group-hover:opacity-40 transition duration-700 animate-pulse"></div>
-              
+
               {/* Decorative Dots */}
               <div className="absolute -top-2 -right-2 w-4 h-4 bg-zinc-400 dark:bg-zinc-500 rounded-full animate-ping opacity-75"></div>
               <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-zinc-400 dark:bg-zinc-500 rounded-full animate-ping opacity-75 delay-300"></div>
@@ -41,35 +38,34 @@ export default function About() {
               <h1 className="text-4xl font-bold text-zinc-900 dark:text-white leading-tight pb-2 tracking-tight">
                 Tentang Saya
               </h1>
-              
-              <div className="flex items-center gap-2 mb-4">
+
+              {/* <div className="flex items-center gap-2 mb-4">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                 <span className="text-xs font-mono text-zinc-500 dark:text-zinc-400">
                   siap untuk magang
                 </span>
-              </div>
+              </div> */}
 
               <div className="space-y-5 text-zinc-500 dark:text-zinc-400 leading-relaxed text-sm">
                 <p>
-                  Halo semuanya, perkenalkan nama saya Muhammad Noviyanto, saya
-                  adalah seorang yang berasal dari Sukoharjo. Awal mula saya
-                  menyukai dunia programming adalah waktu ketika saya smp kenal
-                  dengan perinject an kemudian saya penasaran terhadap code
-                  pemrograman, disitulah saya mulai tertarik dengan dunia
-                  programming.
+                  Halo, Perkenalkan saya Muhammad Noviyanto — seorang Frontend
+                  Developer yang berasal dari Sukoharjo.
                 </p>
                 <p>
-                  Dan akhirnya saya melanjutkan kuliah di Jurusan IT, dan saya pun
-                  semakin tertarik untuk mendalami dunia pemrograman. Untuk
-                  melanjutkan rasa penasaran saya terhadap dunia pemrograman.
+                  Ketertarikan saya terhadap dunia pemrograman dimulai sejak
+                  SMA, ketika rasa penasaran membawa saya untuk mulai mengenal
+                  dan mempelajari kode pemrograman. Dari situ, semangat belajar
+                  saya terus tumbuh hingga akhirnya saya memutuskan untuk
+                  melanjutkan studi di Jurusan Teknik Informatika, di mana saya
+                  semakin mendalami dunia ini.
                 </p>
                 <p>
-                  Melalui portofolio ini saya ingin menunjukkan hasil-hasil project
-                  yang saya kerjakan dan tim, semoga dapat menginspirasi teman-teman
-                  yang ingin menjadi programmer juga. dan jangan menyerah, teruslah
-                  belajar sampai bisa, karena dalam dunia programming tidak ada kata
-                  menunggu, mereka akan terus berkembang mengikuti perkembangan
-                  jaman.
+                  Melalui portofolio ini, saya ingin menampilkan hasil karya
+                  yang telah saya kerjakan, baik secara individu maupun bersama
+                  tim. Semoga dapat menjadi inspirasi bagi teman-teman yang juga
+                  ingin terjun ke dunia pemrograman. Jangan pernah menyerah —
+                  teruslah belajar, karena dunia teknologi akan selalu
+                  berkembang dan selalu ada hal baru yang bisa dipelajari.
                 </p>
               </div>
             </div>

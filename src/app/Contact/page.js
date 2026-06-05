@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CiFacebook, CiTwitter } from "react-icons/ci";
+import { CiFacebook, CiInstagram, CiTwitter } from "react-icons/ci";
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
 import { SiGmail } from "react-icons/si";
 
@@ -22,14 +22,14 @@ export default function Contact() {
             </h2>
 
             <div className="space-y-3">
-              <div className="p-4 bg-zinc-50 dark:bg-zinc-800 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors">
+              {/* <div className="p-4 bg-zinc-50 dark:bg-zinc-800 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors">
                 <div className="flex items-center gap-3">
                   <CiFacebook className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
                   <Link href="" className="text-zinc-600 dark:text-zinc-400 font-medium text-sm hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
                     unknow
                   </Link>
                 </div>
-              </div>
+              </div> */}
 
               <div className="p-4 bg-zinc-50 dark:bg-zinc-800 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors">
                 <div className="flex items-center gap-3">
@@ -38,13 +38,22 @@ export default function Contact() {
                     MuhFi
                   </Link>
                 </div>
-              </div>
 
+              </div>
+              <div className="p-4 bg-zinc-50 dark:bg-zinc-800 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors">
+                <div className="flex items-center gap-3">
+                  <CiInstagram className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
+                  <Link href="https://www.instagram.com/muh.noviyanto?igsh=b2wzN2p4Z2xkYWlv" className="text-zinc-600 dark:text-zinc-400 font-medium text-sm hover:text-pink-600 dark:hover:text-pink-400 transition-colors">
+                    muh.noviyanto
+                  </Link>
+                </div>
+
+              </div>
               <div className="p-4 bg-zinc-50 dark:bg-zinc-800 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors">
                 <div className="flex items-center gap-3">
                   <IoLogoGithub className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
-                  <Link href="https://github.com/muhnov/" className="text-zinc-600 dark:text-zinc-400 font-medium text-sm hover:text-zinc-900 dark:hover:text-white transition-colors">
-                    Muhnov
+                  <Link href="https://github.com/muhnovi/" className="text-zinc-600 dark:text-zinc-400 font-medium text-sm hover:text-zinc-900 dark:hover:text-white transition-colors">
+                    Muhnovi
                   </Link>
                 </div>
               </div>
@@ -52,8 +61,8 @@ export default function Contact() {
               <div className="p-4 bg-zinc-50 dark:bg-zinc-800 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors">
                 <div className="flex items-center gap-3">
                   <IoLogoLinkedin className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
-                  <Link href="" className="text-zinc-600 dark:text-zinc-400 font-medium text-sm hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
-                    unkonw
+                  <Link href="https://www.linkedin.com/in/muhammad-noviyanto-4a46a3329/" className="text-zinc-600 dark:text-zinc-400 font-medium text-sm hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+                    Muhammad Noviyanto
                   </Link>
                 </div>
               </div>
@@ -68,7 +77,7 @@ export default function Contact() {
             <div className="p-4 bg-zinc-50 dark:bg-zinc-800 rounded-xl border border-zinc-200 dark:border-zinc-700 inline-flex items-center gap-3">
               <SiGmail className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
               <span className="text-zinc-600 dark:text-zinc-400 font-medium text-sm font-mono">
-                muhnoviyanto815@gmail.com
+                muhfibusiness@gmail.com
               </span>
             </div>
           </div>

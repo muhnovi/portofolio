@@ -9,7 +9,7 @@ export default function Home() {
       <div className="py-8 my-8 md:pt-[50px] pt-[50px]">
         <div className="bg-white dark:bg-zinc-900 rounded-2xl p-8 shadow-sm border border-zinc-200 dark:border-zinc-800">
           <p className="text-sm font-mono text-zinc-500 dark:text-zinc-400 pb-6 tracking-widest uppercase">
-            Hallo Dunia, Saya 👋
+            Hallo, Saya
           </p>
 
           <h1 className="text-4xl md:text-6xl font-bold text-zinc-900 dark:text-white leading-tight mb-6 floating tracking-tight">
@@ -18,22 +18,22 @@ export default function Home() {
 
           <div className="space-y-3 mb-8">
             <h2 className="text-lg font-semibold text-zinc-700 dark:text-zinc-300">
-              Saya Pemula
+              Frontend Developer
             </h2>
             <p className="text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-2xl text-sm">
-              Suka Tantangan dan Membantu sesama.
+              Mahasiswa Teknik Informatika Semester 6 — Universitas Duta Bangsa Surakarta
             </p>
           </div>
 
           <div className="flex items-center gap-3 mb-8 p-4 bg-zinc-50 dark:bg-zinc-800 rounded-xl border border-zinc-200 dark:border-zinc-700">
-            <div className="w-2.5 h-2.5 bg-zinc-400 dark:bg-zinc-500 rounded-full animate-pulse"></div>
+            <div className="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse"></div>
             <span className="text-zinc-600 dark:text-zinc-400 font-medium text-sm font-mono">
-              Belum Bersedia Untuk Di Rekrut
+              Siap untuk magang
             </span>
           </div>
 
           <Link
-            href="/"
+            href="/CV_Muhammad_Noviyanto.pdf"
             className="inline-flex items-center gap-3 bg-zinc-900 dark:bg-white hover:bg-zinc-700 dark:hover:bg-zinc-200 text-white dark:text-zinc-900 font-semibold py-3 px-6 rounded-full shadow-sm hover:shadow-md transition-all duration-300"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
