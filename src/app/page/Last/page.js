@@ -8,13 +8,13 @@ export default function Last() {
     {
       icon: CiTwitter,
       name: "MuhFi",
-      url: "https://x.com/MuhammadNoviya6",
+      url: "https://x.com/0x9MuhFi",
       label: "X / Twitter",
     },
     {
       icon: IoLogoGithub,
       name: "Muhnov",
-      url: "https://github.com/muhnov",
+      url: "https://github.com/muhnovi",
       label: "GitHub",
     },
   ];
