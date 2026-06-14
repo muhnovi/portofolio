@@ -13,7 +13,7 @@ export default function Last() {
     },
     {
       icon: IoLogoGithub,
-      name: "Muhnov",
+      name: "Muhnovi",
       url: "https://github.com/muhnovi",
       label: "GitHub",
     },
