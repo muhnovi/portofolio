@@ -18,7 +18,7 @@ export default function About() {
             <div className="relative group flex-shrink-0">
               <div className="w-28 h-28 md:w-36 md:h-36 rounded-2xl overflow-hidden border-2 border-zinc-200 dark:border-zinc-700 shadow-lg relative z-10">
                 <Image
-                  src="/images/img.jpg"
+                  src="/images/Muhammad_Noviyanto.png"
                   alt="Muhammad Noviyanto"
                   fill
                   className="object-cover"
